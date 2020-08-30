@@ -18,6 +18,6 @@ def is_prime(n):
 while i < count:
     i += 1
     if is_prime(i):
-        sum += i
+        sum_of_numbers += i
 
-print(sum)
+print(sum_of_numbers)
