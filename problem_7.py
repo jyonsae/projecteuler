@@ -1,23 +1,19 @@
-count, i, j = 10001, 5, 0
-num_arr = [1, 3, 5]
+def sieve(i):
+    arr = [True for j in range(i, i + 1)]
+    p = 2
+    prime_list = []
+    while p * p < i:
+        if arr[i]:
+            for j in range(p * 2, i + 1, p):
+                arr[j] = False
+            p += 1
+
+    arr[0] = False
+    arr[1] = False
+    for p in range(i + 1):
+        if arr[p]:
+            prime_list.append(p)
+    return prime_list
 
 
-def is_prime(num):
-    if num > 1:
-        for k in range(2, num):
-            if num % k == 0:
-                return False
-            else:
-                return True
-    else:
-        return False
-
-
-while True:
-    i += 1
-    if j == count:
-        print("10001st number is: ", num_arr[10000])
-        break
-    if is_prime(i):
-        j += 1
-        num_arr.append(i)
+print(sieve(10001))
