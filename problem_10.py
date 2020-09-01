@@ -1,6 +1,5 @@
 count = 2000000
 sum_of_numbers = 0
-prime_arr = []
 i = 0
 
 
